@@ -2,8 +2,14 @@
 
 namespace WindowsStoreServices.V1.AppAcquisitions
 {
+    /// <summary>
+    /// Query for App acquisition
+    /// </summary>
     public class AppAcquisitionsQuery : OrderedQuery<AppAcquisitionsOrderBy>
     {
-        public override string Uri => "appacquisitions";
+        /// <summary>
+        /// Gets the URL of the query
+        /// </summary>
+        public override string QueryName => "appacquisitions";
     }
 }

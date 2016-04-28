@@ -1,34 +1,64 @@
-﻿using Newtonsoft.Json;
+﻿using System.Runtime.Serialization;
 
 namespace WindowsStoreServices.V1.AppAcquisitions
 {
+    /// <summary>
+    /// Possible fields to order the result data values for each acquisition. 
+    /// </summary>
     public enum AppAcquisitionsOrderBy
     {
-        [JsonProperty("date")]
+        /// <summary>
+        /// Date
+        /// </summary>
+        [EnumMember(Value = "date")]
         Date,
 
-        [JsonProperty("acquisitionType")]
+        /// <summary>
+        /// Type of acquisition
+        /// </summary>
+        [EnumMember(Value = "acquisitionType")]
         AcquisitionType,
 
-        [JsonProperty("ageGroup")]
+        /// <summary>
+        /// Age group
+        /// </summary>
+        [EnumMember(Value = "ageGroup")]
         AgeGroup,
 
-        [JsonProperty("storeClient")]
+        /// <summary>
+        /// Place where the app has been acquired
+        /// </summary>
+        [EnumMember(Value = "storeClient")]
         StoreClient,
 
-        [JsonProperty("gender")]
+        /// <summary>
+        /// Gender of the user
+        /// </summary>
+        [EnumMember(Value = "gender")]
         Gender,
 
-        [JsonProperty("market")]
+        /// <summary>
+        /// Market where the app has been acquired
+        /// </summary>
+        [EnumMember(Value = "market")]
         Market,
 
-        [JsonProperty("osVersion")]
+        /// <summary>
+        /// OS Version of the user
+        /// </summary>
+        [EnumMember(Value = "osVersion")]
         OsVersion,
 
-        [JsonProperty("deviceType")]
+        /// <summary>
+        /// Device type
+        /// </summary>
+        [EnumMember(Value = "deviceType")]
         DeviceType,
 
-        [JsonProperty("orderName")]
+        /// <summary>
+        /// Order name
+        /// </summary>
+        [EnumMember(Value = "orderName")]
         OrderName
     }
 }

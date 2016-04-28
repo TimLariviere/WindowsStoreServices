@@ -2,8 +2,14 @@
 
 namespace WindowsStoreServices.V1.ErrorReportingData
 {
+    /// <summary>
+    /// Query for Error reporting data
+    /// </summary>
     public class ErrorReportingDataQuery : OrderedGroupedQuery<ErrorReportingDataOrderBy, ErrorReportingDataGroupBy>
     {
-        public override string Uri => "failurehits";
+        /// <summary>
+        /// Gets the URL of the query
+        /// </summary>
+        public override string QueryName => "failurehits";
     }
 }

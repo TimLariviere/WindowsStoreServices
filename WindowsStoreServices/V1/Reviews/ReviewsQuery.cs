@@ -2,8 +2,14 @@
 
 namespace WindowsStoreServices.V1.Reviews
 {
+    /// <summary>
+    /// Query for reviews
+    /// </summary>
     public class ReviewsQuery : OrderedQuery<ReviewsOrderBy>
     {
-        public override string Uri => "reviews";
+        /// <summary>
+        /// Gets the URL of the query
+        /// </summary>
+        public override string QueryName => "reviews";
     }
 }

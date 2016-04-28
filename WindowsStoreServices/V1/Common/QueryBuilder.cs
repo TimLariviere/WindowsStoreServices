@@ -64,7 +64,7 @@ namespace WindowsStoreServices.V1.Common
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(OAuthToken.TokenType, OAuthToken.AccessToken);
 
-            var url = Query.GetUri();
+            var url = Query.GetUrl();
             var results = new List<TResult>();
             do
             {

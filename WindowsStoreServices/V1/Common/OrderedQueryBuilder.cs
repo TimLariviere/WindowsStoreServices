@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using WindowsStoreServices.OAuth;
+using WindowsStoreServices.V1.Common.Enums;
 
 namespace WindowsStoreServices.V1.Common
 {
     public class OrderedQueryBuilder<TQueryBuilder, TQuery, TResult, TOrderBy> : QueryBuilder<TQueryBuilder, TQuery, TResult>
         where TQueryBuilder : QueryBuilder<TQueryBuilder, TQuery, TResult>
         where TQuery : OrderedQuery<TOrderBy>, new()
+        where TOrderBy : struct
     {
         #region Constructor
 

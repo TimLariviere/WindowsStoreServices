@@ -1,12 +1,22 @@
 ﻿namespace WindowsStoreServices.V1.Common
 {
+    /// <summary>
+    /// Base query
+    /// </summary>
     public abstract class Query
     {
-        public abstract string Uri { get; }
+        /// <summary>
+        /// Gets the query name part of the URL
+        /// </summary>
+        public abstract string QueryName { get; }
 
-        public virtual string GetUri()
+        /// <summary>
+        /// Build the URL of the query
+        /// </summary>
+        /// <returns>The generated URL</returns>
+        public virtual string GetUrl()
         {
-            return Uri;
+            return QueryName;
         }
     }
 }
