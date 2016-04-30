@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 using System.Runtime.Serialization;
-using WindowsStoreServices.V1.Common.Enums;
 
 namespace WindowsStoreServices.V1.Common
 {
@@ -19,7 +18,7 @@ namespace WindowsStoreServices.V1.Common
         {
             var result = enumValue.ToString();
 
-            var enumType = typeof(AggregationLevels);
+            var enumType = typeof(T);
             var enumMemberAttribute = enumType.GetRuntimeField(result).GetCustomAttribute<EnumMemberAttribute>();
             if (enumMemberAttribute != null)
             {
